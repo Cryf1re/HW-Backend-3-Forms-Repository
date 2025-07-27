@@ -1,0 +1,17 @@
+[project]
+name = "hw-backend-3-forms-repository"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Mukhammad(Cryf1re)"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard] (>=0.116.1,<0.117.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

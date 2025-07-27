@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Car</title></head>
+<body>
+    {% set req = request %}
+    <h1>Add a New Car</h1>
+    <form method="post" action="/cars/new">
+        <label for="name">Car Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="year">Year:</label><br>
+        <input type="text" id="year" name="year" required><br><br>
+
+        <button type="submit">Add Car</button>
+    </form>
+</body>
+</html>

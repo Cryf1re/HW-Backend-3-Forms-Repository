@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Search Cars</title></head>
+<body>
+    {% set req = request %}
+    <h1>Search Cars</h1>
+    <form method="get" action="/cars/search">
+        <input type="text" name="car_name" placeholder="Enter car name" value="{{ car_name }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if cars %}
+        <h2>Results:</h2>
+        <ul>
+            {% for car in cars %}
+                <li>{{ car.name }} ({{ car.year }})</li>
+            {% endfor %}
+        </ul>
+    {% elif car_name %}
+        <p>No results found for "{{ car_name }}"</p>
+    {% endif %}
+</body>
+</html>
